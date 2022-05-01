@@ -9,12 +9,12 @@
 
 Installation Instructions Front End Selenium Unit test
 
-Clone this repository "git clone https://github.com/Nebrethar/8380s22tm5app-test.git"
-In the project folder create a virtualenv
-If windows, "python -m venv venv"
-If Linux, "virtualenv venv"
-Install Selenium using "pip install -U selenium"
-Install the needed Selenium WebDriver for the Chrome Browser https://chromedriver.chromium.org/downloads
-Copy the "chromedriver.exe" to your venv/Scripts folder and activate the executable
+•	Clone this repository "git clone https://github.com/Nebrethar/8380s22tm5app-test.git"
+•	In the project folder create a virtualenv
+•	If windows, "python -m venv venv"
+•	If Linux, "virtualenv venv"
+•	Install Selenium using "pip install -U selenium"
+•	Install the needed Selenium WebDriver for the Chrome Browser https://chromedriver.chromium.org/downloads
+•	Copy the "chromedriver.exe" to your venv/Scripts folder and activate the executable
 
 
