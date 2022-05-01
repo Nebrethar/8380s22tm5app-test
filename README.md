@@ -3,7 +3,11 @@
  - Navigate to the repo in your terminal
  - Run pytest (`py.test backend/*`)
 
-Installation Instructions
+
+
+
+
+Installation Instructions Front End Selenium Unit test
 
 Clone this repository "git clone https://github.com/Nebrethar/8380s22tm5app-test.git"
 In the project folder create a virtualenv
