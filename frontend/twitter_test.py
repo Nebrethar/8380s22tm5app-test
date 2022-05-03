@@ -47,19 +47,17 @@ class TestSignUp(unittest.TestCase):
         elem = driver.find_element(By.XPATH,"/html/body/div[1]/html/div/body/header/div[2]/div/div/div/div/div[2]/button").click()
         time.sleep(5)
         print("step 1: user login successful")
-        elem = driver.find_element(By.XPATH,"/html/body/div[1]/html/div/body/header/div[2]/div/div/div[2]/div/div[2]/ul/li[2]/input")
-        elem.send_keys(zipcode)
-        time.sleep(2)
-        elem = driver.find_element(By.XPATH, "/html/body/div[1]/html/div/body/header/div[2]/div/div/div[2]/div/div[2]/ul/li[2]/a").click()
-        print("step 2: entered zip code and clicked weather button")
+        elem = driver.find_element(By.XPATH, "/html/body/div/html/div/body/header/div[2]/div/div/div[2]/div/div[2]/ul/li[1]/a").click()
+        print("step 2: clicked random button")
         time.sleep(4)
-        elem = driver.find_element(By.XPATH, "/html/body/div[1]/html/div/body/header/div[2]/div[4]/div/div[3]/a").click()
+        elem = driver.find_element(By.XPATH, "/html/body/div/html/div/body/header/div[2]/div[4]/div/div[1]/a").click()
+        print("step 3: clicked share to twitter button")
         time.sleep(2)
         try:
-            print("step 3: success")
+            print("step 4: success")
             assert True
         except NoSuchElementException:
-            self.fail("fb test failed")
+            self.fail("twitter test failed")
             assert False
         time.sleep(3)
         warnings.simplefilter('ignore', ResourceWarning)
