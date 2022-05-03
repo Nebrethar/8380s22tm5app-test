@@ -20,45 +20,45 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.alert import Alert
 
 
-class TestSignUp(unittest.TestCase):
+class TestAdmin(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
         print("step 0:driver is loaded")
 
-    def test_history(self):
+    def test_admin(self):
+        # Admin User Information
         username = "instructor"
         password = "gounomavs1a"
 
-        # History
+
         driver = self.driver
         driver.maximize_window()
-        driver.get("https://stately-granita-d9d023.netlify.app/")
+        driver.get("https://8380s22tm5app.com/admin/")
         time.sleep(4)
-        elem = driver.find_element(By.XPATH, "/html/body/div[1]/html/div/body/header/div[1]/nav/div[2]/a").click()
-        time.sleep(3)
-        elem = driver.find_element(By.XPATH, "/html/body/div[1]/html/div/body/header/div[2]/div/div/div/div/div[2]/div/div/input[1]")
+        elem = driver.find_element(By.ID, "id_username")
         elem.send_keys(username)
-        elem = driver.find_element(By.XPATH, "/html/body/div[1]/html/div/body/header/div[2]/div/div/div/div/div[2]/div/div/input[2]")
+        time.sleep(1)
+        elem = driver.find_element(By.ID,"id_password")
         elem.send_keys(password)
-        time.sleep(3)
-        elem = driver.find_element(By.XPATH,"/html/body/div[1]/html/div/body/header/div[2]/div/div/div/div/div[2]/button").click()
-        time.sleep(5)
-        print("step 1: user login successful")
-        elem = driver.find_element(By.XPATH,"/html/body/div/html/div/body/header/div[1]/nav/div[1]/div/a[2]").click()
-        print("step 2: clicked history button")
-
+        time.sleep(2)
+        elem = driver.find_element(By.XPATH,"/html/body/div[1]/div[2]/div/div[1]/div/form/div[3]/input").click()
+        time.sleep(6)
+        print("step 1: Admin user login successful")
+        elem = driver.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/a[3]").click()
 
 
         try:
+
             print("step 3: success")
             assert True
         except NoSuchElementException:
-            self.fail("history test failed")
+            self.fail("admin login test failed")
             assert False
         time.sleep(3)
         warnings.simplefilter('ignore', ResourceWarning)
 
-    def tearDown(self):
+
+def tearDown(self):
         self.driver.close()
 
 

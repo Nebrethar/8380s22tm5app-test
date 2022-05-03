@@ -40,7 +40,7 @@ class TestSignUp(unittest.TestCase):
         driver = self.driver
         driver.maximize_window()
         driver.get("https://stately-granita-d9d023.netlify.app/")
-        time.sleep(10)
+        time.sleep(4)
         elem = driver.find_element(By.XPATH, "/html/body/div[1]/html/div/body/header/div[1]/nav/div[2]/a").click()
         time.sleep(3)
         elem = driver.find_element(By.XPATH,"/html/body/div[1]/html/div/body/header/div[2]/div/div/div/div/div[2]/a").click()
