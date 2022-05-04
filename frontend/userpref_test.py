@@ -20,16 +20,16 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.alert import Alert
 
 
-class TestHistory(unittest.TestCase):
+class TestUserPreferences(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
         print("step 0:driver is loaded")
 
-    def test_history(self):
+    def test_userpref(self):
         username = "instructor"
         password = "gounomavs1a"
 
-        # History
+        # User preferences
         driver = self.driver
         driver.maximize_window()
         driver.get("https://stately-granita-d9d023.netlify.app/")
@@ -44,16 +44,14 @@ class TestHistory(unittest.TestCase):
         elem = driver.find_element(By.XPATH,"/html/body/div[1]/html/div/body/header/div[2]/div/div/div/div/div[2]/button").click()
         time.sleep(5)
         print("step 1: user login successful")
-        elem = driver.find_element(By.XPATH,"/html/body/div/html/div/body/header/div[1]/nav/div[1]/div/a[2]").click()
-        print("step 2: clicked history button")
-
-
+        elem = driver.find_element(By.XPATH,"/html/body/div/html/div/body/header/div[1]/nav/div[1]/div/a[3]").click()
+        print("step 2: clicked user preferences link")
 
         try:
             print("step 3: success")
             assert True
         except NoSuchElementException:
-            self.fail("history test failed")
+            self.fail("user preferences test failed")
             assert False
         time.sleep(3)
         warnings.simplefilter('ignore', ResourceWarning)

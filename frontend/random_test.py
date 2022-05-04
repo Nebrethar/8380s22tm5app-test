@@ -45,15 +45,13 @@ class TestRandom(unittest.TestCase):
         elem = driver.find_element(By.XPATH,"/html/body/div[1]/html/div/body/header/div[2]/div/div/div/div/div[2]/button").click()
         time.sleep(5)
         print("step 1: user login successful")
-        elem = driver.find_element(By.XPATH,
-                                   "/html/body/div[1]/html/div/body/header/div[2]/div/div/div[2]/div/div[2]/ul/li[1]/a").click()
+        elem = driver.find_element(By.XPATH, "/html/body/div[1]/html/div/body/header/div[2]/div/div/div[2]/div/div[2]/ul/li[1]/a").click()
         time.sleep(2)
         print("step 2: clicked random link")
         elem = driver.find_element(By.XPATH, "/html/body/div[1]/html/div/body/header/div[2]/div[5]/div/iframe")
         time.sleep(5)
         print("step 3: random recommendation success")
-        elem = driver.find_element(By.XPATH,
-                                   "/html/body/div[1]/html/div/body/header/div[1]/nav/div[2]/a").click()
+        elem = driver.find_element(By.XPATH, "/html/body/div[1]/html/div/body/header/div[1]/nav/div[2]/a").click()
         print("step 4: logged out successfully")
         try:
             print("step 5: success")
